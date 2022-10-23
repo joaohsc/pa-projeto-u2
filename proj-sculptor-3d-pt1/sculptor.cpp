@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include "sculptor.h"
 
@@ -21,6 +22,18 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
     {
         v[0][i] = v[0][i-1] + nx;
     }
+
+    for (int i = 0; i < nx; i++)
+    {
+        for (int j = 0; j < ny; j++)
+        {
+            for (int k = 0; k < nz; k++)
+            {
+                v[i][j][k].isOn=false;
+            }
+        }
+    }
+
 }
 
 Sculptor::~Sculptor()
@@ -30,12 +43,12 @@ Sculptor::~Sculptor()
     delete [] v;
 }
 
-void Sculptor::setColor(float _r, float _g, float _b, float _a)
+void Sculptor::setColor(float r, float g, float b, float a)
 {
-    r = _r;
-    g = _g;
-    b = _b;
-    a = _a;
+    this->r = r;
+    this->g = g;
+    this->b = b;
+    this->a = a;
 }
 
 void Sculptor::putVoxel(int x, int y, int z)
@@ -54,11 +67,11 @@ void Sculptor::cutVoxel(int x, int y, int z)
 
 void Sculptor:: putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
-    for (int k = z0; k < z1; k++)
+    for (int i = x0; i < x1; i++)
     {
         for (int j = y0; j < y1; j++)
         {
-            for (int i = x0; i < x1; i++)
+            for (int k = z0; k < z1; k++)
             {
                 putVoxel(i,j,k);
             }
@@ -82,18 +95,19 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
-    double equation;
 
-    for (int k = 0; k <= nz; k++)
+
+    for (int i = 0; i < nx; i++)
     {
-        for (int j = 0; j <= ny; j++)
+        for (int j = 0; j < ny; j++)
         {
-            for (int i = 0; i <= nx; i++)
+            for (int k = 0; k < nz; k++)
             {
                 int p1= i - xcenter;
                 int p2= j - ycenter;
                 int p3= k - zcenter;
-                equation = (p1*p1) + (p2*p2) + (p3*p3);
+                float equation = ((p1*p1) + (p2*p2) + (p3*p3));
+
                 if (equation <= radius*radius)
                 {
                     putVoxel(i,j,k);
@@ -104,19 +118,19 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 }
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
-
-
-    for (int k = 0; k <= nz; k++)
+    for (int i = 0; i < nx; i++)
     {
-        for (int j = 0; j <= ny; j++)
+        for (int j = 0; j < ny; j++)
         {
-            for (int i = 0; i <= nx; i++)
+            for (int k = 0; k < nz; k++)
             {
                 int p1= i - xcenter;
                 int p2= j - ycenter;
                 int p3= k - zcenter;
 
-                if ((p1*p1) + (p2*p2) + (p3*p3) <= radius*radius)
+                float equation = ((p1*p1) + (p2*p2) + (p3*p3));
+
+                if (equation <= radius*radius)
                 {
                     cutVoxel(i,j,k);
                 }
@@ -127,17 +141,18 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
-    for (int k = 0; k <= nz; k++)
+    for (int i = 0; i < nx; i++)
     {
-        for (int j = 0; j <= ny; j++)
+        for (int j = 0; j < ny; j++)
         {
-            for (int i = 0; i <= nx; i++)
+            for (int k = 0; k < nz; k++)
             {
+
                 int p1= i - xcenter;
                 int p2= j - ycenter;
                 int p3= k - zcenter;
 
-                double conta = ((p1*p1)/(rx*rx)) + ((p2*p2)/(ry*ry)) + ((p3*p3) / (rz*rz));
+                float conta = ((float)(p1*p1)/(rx*rx)) + ((float)(p2*p2)/(ry*ry)) + ((float)(p3*p3) / (rz*rz));
                 if (conta <= 1)
                 {
                     putVoxel(i,j,k);
@@ -150,20 +165,20 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
-    for (int k = 0; k <= nz; k++)
+    for (int i = 0; i < nx; i++)
     {
-        for (int j = 0; j <= ny; j++)
+        for (int j = 0; j < ny; j++)
         {
-            for (int i = 0; i <= nx; i++)
+            for (int k = 0; k < nz; k++)
             {
                 int p1= i - xcenter;
                 int p2= j - ycenter;
                 int p3= k - zcenter;
 
-                double conta = ((p1*p1)/(rx*rx)) + ((p2*p2)/(ry*ry)) + ((p3*p3) / (rz*rz));
+                float conta = ((float)(p1*p1)/(rx*rx)) + ((float)(p2*p2)/(ry*ry)) + ((float)(p3*p3) / (rz*rz));
                 if (conta <= 1)
                 {
-                    putVoxel(i,j,k);
+                    cutVoxel(i,j,k);
                 }
             }
         }
@@ -179,6 +194,10 @@ void Sculptor::writeOFF(const char* filename)
 
 
     file.open(filename);
+
+    if(!file.is_open()){
+        exit(1);
+    }
 
     file << "OFF" << std::endl;
 
@@ -198,6 +217,9 @@ void Sculptor::writeOFF(const char* filename)
     }
 
     file << nv << ' ' << nf << ' ' << 0 << std::endl;
+
+    file << std::fixed;
+    file << std::setprecision(2);
 
     for (int i = 0; i < nx; i++)
     {
@@ -229,9 +251,9 @@ void Sculptor::writeOFF(const char* filename)
             {
                 if (v[i][j][k].isOn)
                 {
-                    float red = v[i][j][k].r*255;
-                    float green = v[i][j][k].g*255;
-                    float blue = v[i][j][k].b*255;
+                    float red = v[i][j][k].r;
+                    float green = v[i][j][k].g;
+                    float blue = v[i][j][k].b;
                     float alpha = v[i][j][k].a;
 
                     file << 4 << ' ' << count + 0 << ' ' << count + 3 << ' ' << count + 2 << ' ' << count + 1 << ' ';
@@ -251,6 +273,8 @@ void Sculptor::writeOFF(const char* filename)
 
                     file << 4 << ' ' << count + 1 << ' ' << count + 2 << ' ' << count + 6 << ' ' << count + 5 << ' ';
                     file << red << ' ' << green << ' ' << blue << ' ' << alpha << std::endl;
+
+
 
                     count += 8;
                 }
