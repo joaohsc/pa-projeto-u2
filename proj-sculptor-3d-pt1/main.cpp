@@ -22,6 +22,7 @@ int main()
 
 
     canva.putSphere(20,10,20,5);
+    canva.cutSphere(20,13,20,3);
 
     canva.putBox(19,22,0,6,19,22);
 

@@ -10,18 +10,15 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
     nz = _nz;
 
     v = new Voxel**[nx];
-    v[0] = new Voxel*[nx*ny];
-    v[0][0] = new Voxel[nx*ny*nz];
 
-    for(int i=1; i<nz; i++)
+    for (int i = 0; i < nx; i++)
     {
-        v[i] = v[i-1] + ny;
+        v[i] = new Voxel*[ny];
+        for (int j = 0; j < ny; j++) {
+            v[i][j] = new Voxel[nz];
+        }
     }
 
-    for(int i=1; i<nz*ny; i++)
-    {
-        v[0][i] = v[0][i-1] + nx;
-    }
 
     for (int i = 0; i < nx; i++)
     {
@@ -38,9 +35,18 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
 
 Sculptor::~Sculptor()
 {
-    delete [] v[0][0];
-    delete [] v[0];
-    delete [] v;
+    for (int i = 0; i < nx; i++) {
+        for (int j = 0; j < ny; j++) {
+            delete[] v[i][j];
+        }
+        delete[] v[i];
+    }
+
+    delete[] v;
+
+    nx = 0;
+    ny = 0;
+    nz = 0;
 }
 
 void Sculptor::setColor(float r, float g, float b, float a)
