@@ -71,6 +71,16 @@ void Sculptor::cutVoxel(int x, int y, int z)
     v[x][y][z].isOn =false;
 }
 
+int Sculptor::getNx(){
+    return nx;
+}
+int Sculptor::getNy(){
+    return ny;
+}
+int Sculptor::getNz(){
+    return nz;
+}
+
 void Sculptor::writeOFF(const char* filename)
 {
     std::ofstream file;

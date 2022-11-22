@@ -106,6 +106,9 @@ public:
      *  @brief writeOFF é um método que cria/edita um documento em formato .OFF
      */
     void writeOFF(const char* filename);
+    int getNx();
+    int getNy();
+    int getNz();
 };
 
 #endif // SCULPTOR_H

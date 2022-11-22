@@ -21,9 +21,9 @@ void putSphere:: draw(Sculptor &s){
 
     s.setColor(r,g,b,a);
 
-    for (int i = 0; i < (xcenter+radius); i++) {
-        for (int j = 0; j < (ycenter+radius); j++) {
-            for (int k = 0; k < (zcenter+radius); k++) {
+    for (int i = 0; i < s.getNx(); i++) {
+        for (int j = 0; j < s.getNy(); j++) {
+            for (int k = 0; k < s.getNz(); k++) {
                 int p1= i - xcenter;
                 int p2= j - ycenter;
                 int p3= k - zcenter;

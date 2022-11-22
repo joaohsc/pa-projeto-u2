@@ -14,9 +14,9 @@ cutEllipsoid::~cutEllipsoid(){
 
 }
 void cutEllipsoid::draw(Sculptor &s){
-    for (int i = 0; i < (xcenter+rx); i++) {
-        for (int j = 0; j < (ycenter+ry); j++) {
-            for (int k = 0; k < (zcenter+rz); k++) {
+    for (int i = 0; i < s.getNx(); i++) {
+        for (int j = 0; j < s.getNy(); j++) {
+            for (int k = 0; k < s.getNz(); k++) {
                 int p1= i - xcenter;
                 int p2= j - ycenter;
                 int p3= k - zcenter;

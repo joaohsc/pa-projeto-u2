@@ -22,7 +22,6 @@ int main()
 
 
     std::vector<FiguraGeometrica*> figs;
-    std::vector<FiguraGeometrica*>::iterator itf;
 
     std::ifstream fin;
 
@@ -99,15 +98,14 @@ int main()
 
     scp= new Sculptor(dx, dy, dz);
 
-    for(auto it: figs){
-        it->draw(*scp);
+    for(size_t i=0;i<figs.size();i++){
+        figs[i]->draw(*scp);
     }
 
-    scp->writeOFF((char*) "caneca.off");
+    scp->writeOFF("caneca.off");
 
-    for(itf = figs.begin(); itf!=figs.end(); itf++){
-        delete *itf;
+    for(size_t i=0;i<figs.size();i++){
+        delete figs[i];
     }
-
     return 0;
 }
