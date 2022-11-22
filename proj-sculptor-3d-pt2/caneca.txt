@@ -1,0 +1,16 @@
+dim 41 41 41
+putellipsoid 20 20 20 5 10 5 0.0 0.0 1.0 1.0
+cutellipsoid 20 20 20 4 9 4
+cutbox 15 25 21 31 15 25
+cutvoxel 20 20 15
+cutvoxel 15 20 20
+cutvoxel 20 20 25
+cutvoxel 25 20 20
+putsphere 20 10 20 5 0.0 0.0 1.0 1.0
+cutsphere 20 13 20 3
+putbox 19 22 0 6 19 22 0.0 0.0 1.0 1.0
+putbox 18 23 0 2 18 23 0.0 0.0 1.0 1.0
+putvoxel 23 0 20 0.0 0.0 1.0 1.0
+putvoxel 17 0 20 0.0 0.0 1.0 1.0
+putvoxel 20 0 17 0.0 0.0 1.0 1.0
+putvoxel 20 0 23 0.0 0.0 1.0 1.0
