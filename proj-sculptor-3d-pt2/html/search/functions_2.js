@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['putbox_0',['putBox',['../class_sculptor.html#a311ad7a0fb83fc67ac1f378be8e99fe1',1,'Sculptor']]],
-  ['putellipsoid_1',['putEllipsoid',['../class_sculptor.html#a093615b0c2b9b3a17a56300b9b939f39',1,'Sculptor']]],
-  ['putsphere_2',['putSphere',['../class_sculptor.html#a794a2b6ee8fc8098fd6150cb46101fc6',1,'Sculptor']]],
-  ['putvoxel_3',['putVoxel',['../class_sculptor.html#a4bdea3048b419d58e93074060eaa7b52',1,'Sculptor']]]
+  ['getnx_0',['getNx',['../class_sculptor.html#a9fa9452699877020a9fe9ac25452fb02',1,'Sculptor']]],
+  ['getny_1',['getNy',['../class_sculptor.html#a2b54a4cc5db32d0d774a029ca33da3d4',1,'Sculptor']]],
+  ['getnz_2',['getNz',['../class_sculptor.html#a8c46199d2ab46e8567edf508c91def1f',1,'Sculptor']]]
 ];

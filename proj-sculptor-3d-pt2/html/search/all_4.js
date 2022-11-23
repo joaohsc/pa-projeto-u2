@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ison_0',['isOn',['../struct_voxel.html#a6fbe8bd53f64685ac4210726d40fc775',1,'Voxel']]]
+  ['figurageometrica_0',['FiguraGeometrica',['../class_figura_geometrica.html',1,'']]],
+  ['figurageometrica_2eh_1',['figurageometrica.h',['../figurageometrica_8h.html',1,'']]]
 ];

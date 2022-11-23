@@ -47,62 +47,6 @@ public:
      */
     void cutVoxel(int x, int y, int z);
     /**
-     *  @brief putBox adiciona voxels nos eixos configurados no formato de um cubo(box)
-     *  @param x0 representa o eixo x inicial
-     *  @param x1 representa o eixo x final
-     *  @param y0 representa o eixo y inicial
-     *  @param y1 representa o eixo y final
-     *  @param z0 representa o eixo z inicial
-     *  @param z1 representa o eixo z final
-     */
-    void putBox(int x0, int x1, int y0, int y1, int z0, int z1);
-    /**
-     *  @brief cutBox remove voxels nos eixos configurados no formato de um cubo(box)
-     *  @param x0 representa o eixo x inicial
-     *  @param x1 representa o eixo x final
-     *  @param y0 representa o eixo y inicial
-     *  @param y1 representa o eixo y final
-     *  @param z0 representa o eixo z inicial
-     *  @param z1 representa o eixo z final
-     */
-    void cutBox(int x0, int x1, int y0, int y1, int z0, int z1);
-    /**
-     *  @brief putSphere adiciona voxels nos eixos configurados no formato de uma esfera
-     *  @param xcenter representa centro da esfera no eixo x
-     *  @param ycenter representa centro da esfera no eixo y
-     *  @param zcenter representa centro da esfera no eixo z
-     *  @param radius é presenta o raio da esfera
-     */
-    void putSphere(int xcenter, int ycenter, int zcenter, int radius);
-    /**
-     *  @brief cutSphere remove voxels nos eixos configurados no formato de uma esfera
-     *  @param xcenter representa centro da esfera no eixo x
-     *  @param ycenter representa centro da esfera no eixo y
-     *  @param zcenter representa centro da esfera no eixo z
-     *  @param radius é presenta o raio da esfera
-     */
-    void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
-    /**
-     *  @brief putEllipsoid adiciona voxels nos eixos configurados no formato de uma elipsoide
-     *  @param xcenter representa centro do elipsoide no eixo x
-     *  @param ycenter representa centro do elipsoide no eixo y
-     *  @param zcenter representa centro do elipsoide no eixo z
-     *  @param rx representa o raio da esfera no eixo x
-     *  @param ry representa o raio da esfera no eixo y
-     *  @param rz representa o raio da esfera no eixo z
-     */
-    void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-    /**
-     *  @brief cutEllipsoid remove voxels nos eixos configurados no formato de uma elipsoide
-     *  @param xcenter representa centro do elipsoide no eixo x
-     *  @param ycenter representa centro do elipsoide no eixo y
-     *  @param zcenter representa centro do elipsoide no eixo z
-     *  @param rx representa o raio da esfera no eixo x
-     *  @param ry representa o raio da esfera no eixo y
-     *  @param rz representa o raio da esfera no eixo z
-     */
-    void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-    /**
      *  @brief writeOFF é um método que cria/edita um documento em formato .OFF
      */
     void writeOFF(const char* filename);

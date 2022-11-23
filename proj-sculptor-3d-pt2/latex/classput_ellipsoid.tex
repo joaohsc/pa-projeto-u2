@@ -1,0 +1,146 @@
+\hypertarget{classput_ellipsoid}{}\doxysection{put\+Ellipsoid Class Reference}
+\label{classput_ellipsoid}\index{putEllipsoid@{putEllipsoid}}
+
+
+a classe put adiciona voxel no formato de elipsoide  
+
+
+
+
+{\ttfamily \#include $<$putellipsoid.\+h$>$}
+
+Inheritance diagram for put\+Ellipsoid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classput_ellipsoid}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classput_ellipsoid_aefad71d076c5b6fc302a0ca7554a1be4}{put\+Ellipsoid}} (int \mbox{\hyperlink{classput_ellipsoid_a6740de00c98f9b510d92c65f628fe559}{xcenter}}, int \mbox{\hyperlink{classput_ellipsoid_adb01d95e70b45ce240ce16d76ebcfb71}{ycenter}}, int \mbox{\hyperlink{classput_ellipsoid_a54a37ce969af959213d510b1d438c388}{zcenter}}, int \mbox{\hyperlink{classput_ellipsoid_a370dd56d175e9f649ba0a01dd2168b3c}{rx}}, int \mbox{\hyperlink{classput_ellipsoid_a2ed03df07d48f241ee87a24bf880a49f}{ry}}, int \mbox{\hyperlink{classput_ellipsoid_a7bf933fe66a12b54cd39f91ebb969029}{rz}}, float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}, float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}, float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}, float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}})
+\begin{DoxyCompactList}\small\item\em o construtor montar o objeto atribuindo os parâmetros \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classput_ellipsoid_ae20016b0dcc08bdcb3ea86a41dba108a}{$\sim$put\+Ellipsoid}} ()
+\item 
+void \mbox{\hyperlink{classput_ellipsoid_a9cd408459b8b664592f097e1b90c6a7d}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classput_ellipsoid_a6740de00c98f9b510d92c65f628fe559}{xcenter}}
+\item 
+int \mbox{\hyperlink{classput_ellipsoid_adb01d95e70b45ce240ce16d76ebcfb71}{ycenter}}
+\item 
+int \mbox{\hyperlink{classput_ellipsoid_a54a37ce969af959213d510b1d438c388}{zcenter}}
+\item 
+int \mbox{\hyperlink{classput_ellipsoid_a370dd56d175e9f649ba0a01dd2168b3c}{rx}}
+\item 
+int \mbox{\hyperlink{classput_ellipsoid_a2ed03df07d48f241ee87a24bf880a49f}{ry}}
+\item 
+int \mbox{\hyperlink{classput_ellipsoid_a7bf933fe66a12b54cd39f91ebb969029}{rz}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a classe put adiciona voxel no formato de elipsoide 
+
+na classe definimos os métodos utilizados para configurar a forma e cor 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classput_ellipsoid_aefad71d076c5b6fc302a0ca7554a1be4}\label{classput_ellipsoid_aefad71d076c5b6fc302a0ca7554a1be4}} 
+\index{putEllipsoid@{putEllipsoid}!putEllipsoid@{putEllipsoid}}
+\index{putEllipsoid@{putEllipsoid}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{putEllipsoid()}{putEllipsoid()}}
+{\footnotesize\ttfamily put\+Ellipsoid\+::put\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{rx,  }\item[{int}]{ry,  }\item[{int}]{rz,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+o construtor montar o objeto atribuindo os parâmetros 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & representa o eixo central X \\
+\hline
+{\em ycenter} & representa o eixo central Y \\
+\hline
+{\em zcenter} & representa o eixo central Z \\
+\hline
+{\em rx} & representa o raio no eixo X \\
+\hline
+{\em ry} & representa o raio no eixo Y \\
+\hline
+{\em rz} & representa o raio no eixo Z \\
+\hline
+{\em r} & representa a cor vermelho no formato RGBA \\
+\hline
+{\em g} & representa a cor verde no formato RGBA \\
+\hline
+{\em b} & representa a cor azul no formato RGBA \\
+\hline
+{\em a} & representa a transparência no formato RGBA \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classput_ellipsoid_ae20016b0dcc08bdcb3ea86a41dba108a}\label{classput_ellipsoid_ae20016b0dcc08bdcb3ea86a41dba108a}} 
+\index{putEllipsoid@{putEllipsoid}!````~putEllipsoid@{$\sim$putEllipsoid}}
+\index{````~putEllipsoid@{$\sim$putEllipsoid}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{$\sim$putEllipsoid()}{~putEllipsoid()}}
+{\footnotesize\ttfamily put\+Ellipsoid\+::$\sim$put\+Ellipsoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classput_ellipsoid_a9cd408459b8b664592f097e1b90c6a7d}\label{classput_ellipsoid_a9cd408459b8b664592f097e1b90c6a7d}} 
+\index{putEllipsoid@{putEllipsoid}!draw@{draw}}
+\index{draw@{draw}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void put\+Ellipsoid\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classput_ellipsoid_a370dd56d175e9f649ba0a01dd2168b3c}\label{classput_ellipsoid_a370dd56d175e9f649ba0a01dd2168b3c}} 
+\index{putEllipsoid@{putEllipsoid}!rx@{rx}}
+\index{rx@{rx}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{rx}{rx}}
+{\footnotesize\ttfamily int put\+Ellipsoid\+::rx\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classput_ellipsoid_a2ed03df07d48f241ee87a24bf880a49f}\label{classput_ellipsoid_a2ed03df07d48f241ee87a24bf880a49f}} 
+\index{putEllipsoid@{putEllipsoid}!ry@{ry}}
+\index{ry@{ry}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{ry}{ry}}
+{\footnotesize\ttfamily int put\+Ellipsoid\+::ry\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classput_ellipsoid_a7bf933fe66a12b54cd39f91ebb969029}\label{classput_ellipsoid_a7bf933fe66a12b54cd39f91ebb969029}} 
+\index{putEllipsoid@{putEllipsoid}!rz@{rz}}
+\index{rz@{rz}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{rz}{rz}}
+{\footnotesize\ttfamily int put\+Ellipsoid\+::rz\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classput_ellipsoid_a6740de00c98f9b510d92c65f628fe559}\label{classput_ellipsoid_a6740de00c98f9b510d92c65f628fe559}} 
+\index{putEllipsoid@{putEllipsoid}!xcenter@{xcenter}}
+\index{xcenter@{xcenter}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{xcenter}{xcenter}}
+{\footnotesize\ttfamily int put\+Ellipsoid\+::xcenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classput_ellipsoid_adb01d95e70b45ce240ce16d76ebcfb71}\label{classput_ellipsoid_adb01d95e70b45ce240ce16d76ebcfb71}} 
+\index{putEllipsoid@{putEllipsoid}!ycenter@{ycenter}}
+\index{ycenter@{ycenter}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{ycenter}{ycenter}}
+{\footnotesize\ttfamily int put\+Ellipsoid\+::ycenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classput_ellipsoid_a54a37ce969af959213d510b1d438c388}\label{classput_ellipsoid_a54a37ce969af959213d510b1d438c388}} 
+\index{putEllipsoid@{putEllipsoid}!zcenter@{zcenter}}
+\index{zcenter@{zcenter}!putEllipsoid@{putEllipsoid}}
+\doxysubsubsection{\texorpdfstring{zcenter}{zcenter}}
+{\footnotesize\ttfamily int put\+Ellipsoid\+::zcenter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{putellipsoid_8h}{putellipsoid.\+h}}\item 
+\mbox{\hyperlink{putellipsoid_8cpp}{putellipsoid.\+cpp}}\end{DoxyCompactItemize}

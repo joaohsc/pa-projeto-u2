@@ -19,23 +19,17 @@ a classe sculptor monta os voxels em uma matriz 3d
 void \mbox{\hyperlink{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}{set\+Color}} (float r, float g, float b, float a)
 \begin{DoxyCompactList}\small\item\em set\+Color é o método para definir qual a cor do voxel no formato RGBA \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}{put\+Voxel}} (int x, int y, int z)
-\begin{DoxyCompactList}\small\item\em put\+Voxel adiciona um voxel nos eixos configurados \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classput_voxel}{put\+Voxel}} adiciona um voxel nos eixos configurados \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cut\+Voxel}} (int x, int y, int z)
-\begin{DoxyCompactList}\small\item\em cut\+Voxel remove um voxel nos eixos configurados \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}{put\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
-\begin{DoxyCompactList}\small\item\em put\+Box adiciona voxels nos eixos configurados no formato de um cubo(box) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}{cut\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
-\begin{DoxyCompactList}\small\item\em cut\+Box remove voxels nos eixos configurados no formato de um cubo(box) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_sculptor_a794a2b6ee8fc8098fd6150cb46101fc6}{put\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius)
-\begin{DoxyCompactList}\small\item\em put\+Sphere adiciona voxels nos eixos configurados no formato de uma esfera \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_sculptor_a67ab8c0ba5116adb8af1d01ad373ac15}{cut\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius)
-\begin{DoxyCompactList}\small\item\em cut\+Sphere remove voxels nos eixos configurados no formato de uma esfera \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_sculptor_a093615b0c2b9b3a17a56300b9b939f39}{put\+Ellipsoid}} (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-\begin{DoxyCompactList}\small\item\em put\+Ellipsoid adiciona voxels nos eixos configurados no formato de uma elipsoide \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_sculptor_a18d2922c111c4c13653ee07d878151ad}{cut\+Ellipsoid}} (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-\begin{DoxyCompactList}\small\item\em cut\+Ellipsoid remove voxels nos eixos configurados no formato de uma elipsoide \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcut_voxel}{cut\+Voxel}} remove um voxel nos eixos configurados \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sculptor_a58cb72d22001a5034f15383ca983830c}{write\+OFF}} (const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em write\+OFF é um método que cria/edita um documento em formato .OFF \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em write\+OFF é um método que cria/edita um documento em formato .OFF \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_a9fa9452699877020a9fe9ac25452fb02}{get\+Nx}} ()
+\item 
+int \mbox{\hyperlink{class_sculptor_a2b54a4cc5db32d0d774a029ca33da3d4}{get\+Ny}} ()
+\item 
+int \mbox{\hyperlink{class_sculptor_a8c46199d2ab46e8567edf508c91def1f}{get\+Nz}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -76,77 +70,6 @@ o destrutor libera espaço alocado
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}\label{class_sculptor_aa84a1b12b09e9e103fc8d78f8d1bc00f}} 
-\index{Sculptor@{Sculptor}!cutBox@{cutBox}}
-\index{cutBox@{cutBox}!Sculptor@{Sculptor}}
-\doxysubsubsection{\texorpdfstring{cutBox()}{cutBox()}}
-{\footnotesize\ttfamily void Sculptor\+::cut\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
-
-
-
-cut\+Box remove voxels nos eixos configurados no formato de um cubo(box) 
-
-
-\begin{DoxyParams}{Parameters}
-{\em x0} & representa o eixo x inicial \\
-\hline
-{\em x1} & representa o eixo x final \\
-\hline
-{\em y0} & representa o eixo y inicial \\
-\hline
-{\em y1} & representa o eixo y final \\
-\hline
-{\em z0} & representa o eixo z inicial \\
-\hline
-{\em z1} & representa o eixo z final \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_sculptor_a18d2922c111c4c13653ee07d878151ad}\label{class_sculptor_a18d2922c111c4c13653ee07d878151ad}} 
-\index{Sculptor@{Sculptor}!cutEllipsoid@{cutEllipsoid}}
-\index{cutEllipsoid@{cutEllipsoid}!Sculptor@{Sculptor}}
-\doxysubsubsection{\texorpdfstring{cutEllipsoid()}{cutEllipsoid()}}
-{\footnotesize\ttfamily void Sculptor\+::cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{rx,  }\item[{int}]{ry,  }\item[{int}]{rz }\end{DoxyParamCaption})}
-
-
-
-cut\+Ellipsoid remove voxels nos eixos configurados no formato de uma elipsoide 
-
-
-\begin{DoxyParams}{Parameters}
-{\em xcenter} & representa centro do elipsoide no eixo x \\
-\hline
-{\em ycenter} & representa centro do elipsoide no eixo y \\
-\hline
-{\em zcenter} & representa centro do elipsoide no eixo z \\
-\hline
-{\em rx} & representa o raio da esfera no eixo x \\
-\hline
-{\em ry} & representa o raio da esfera no eixo y \\
-\hline
-{\em rz} & representa o raio da esfera no eixo z \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_sculptor_a67ab8c0ba5116adb8af1d01ad373ac15}\label{class_sculptor_a67ab8c0ba5116adb8af1d01ad373ac15}} 
-\index{Sculptor@{Sculptor}!cutSphere@{cutSphere}}
-\index{cutSphere@{cutSphere}!Sculptor@{Sculptor}}
-\doxysubsubsection{\texorpdfstring{cutSphere()}{cutSphere()}}
-{\footnotesize\ttfamily void Sculptor\+::cut\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius }\end{DoxyParamCaption})}
-
-
-
-cut\+Sphere remove voxels nos eixos configurados no formato de uma esfera 
-
-
-\begin{DoxyParams}{Parameters}
-{\em xcenter} & representa centro da esfera no eixo x \\
-\hline
-{\em ycenter} & representa centro da esfera no eixo y \\
-\hline
-{\em zcenter} & representa centro da esfera no eixo z \\
-\hline
-{\em radius} & é presenta o raio da esfera \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}\label{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}} 
 \index{Sculptor@{Sculptor}!cutVoxel@{cutVoxel}}
 \index{cutVoxel@{cutVoxel}!Sculptor@{Sculptor}}
@@ -155,7 +78,7 @@ cut\+Sphere remove voxels nos eixos configurados no formato de uma esfera
 
 
 
-cut\+Voxel remove um voxel nos eixos configurados 
+\mbox{\hyperlink{classcut_voxel}{cut\+Voxel}} remove um voxel nos eixos configurados 
 
 
 \begin{DoxyParams}{Parameters}
@@ -166,77 +89,24 @@ cut\+Voxel remove um voxel nos eixos configurados
 {\em z} & representa o eixo Z \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}\label{class_sculptor_a311ad7a0fb83fc67ac1f378be8e99fe1}} 
-\index{Sculptor@{Sculptor}!putBox@{putBox}}
-\index{putBox@{putBox}!Sculptor@{Sculptor}}
-\doxysubsubsection{\texorpdfstring{putBox()}{putBox()}}
-{\footnotesize\ttfamily void Sculptor\+::put\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_sculptor_a9fa9452699877020a9fe9ac25452fb02}\label{class_sculptor_a9fa9452699877020a9fe9ac25452fb02}} 
+\index{Sculptor@{Sculptor}!getNx@{getNx}}
+\index{getNx@{getNx}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getNx()}{getNx()}}
+{\footnotesize\ttfamily int Sculptor\+::get\+Nx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_sculptor_a2b54a4cc5db32d0d774a029ca33da3d4}\label{class_sculptor_a2b54a4cc5db32d0d774a029ca33da3d4}} 
+\index{Sculptor@{Sculptor}!getNy@{getNy}}
+\index{getNy@{getNy}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getNy()}{getNy()}}
+{\footnotesize\ttfamily int Sculptor\+::get\+Ny (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_sculptor_a8c46199d2ab46e8567edf508c91def1f}\label{class_sculptor_a8c46199d2ab46e8567edf508c91def1f}} 
+\index{Sculptor@{Sculptor}!getNz@{getNz}}
+\index{getNz@{getNz}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getNz()}{getNz()}}
+{\footnotesize\ttfamily int Sculptor\+::get\+Nz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-put\+Box adiciona voxels nos eixos configurados no formato de um cubo(box) 
-
-
-\begin{DoxyParams}{Parameters}
-{\em x0} & representa o eixo x inicial \\
-\hline
-{\em x1} & representa o eixo x final \\
-\hline
-{\em y0} & representa o eixo y inicial \\
-\hline
-{\em y1} & representa o eixo y final \\
-\hline
-{\em z0} & representa o eixo z inicial \\
-\hline
-{\em z1} & representa o eixo z final \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_sculptor_a093615b0c2b9b3a17a56300b9b939f39}\label{class_sculptor_a093615b0c2b9b3a17a56300b9b939f39}} 
-\index{Sculptor@{Sculptor}!putEllipsoid@{putEllipsoid}}
-\index{putEllipsoid@{putEllipsoid}!Sculptor@{Sculptor}}
-\doxysubsubsection{\texorpdfstring{putEllipsoid()}{putEllipsoid()}}
-{\footnotesize\ttfamily void Sculptor\+::put\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{rx,  }\item[{int}]{ry,  }\item[{int}]{rz }\end{DoxyParamCaption})}
-
-
-
-put\+Ellipsoid adiciona voxels nos eixos configurados no formato de uma elipsoide 
-
-
-\begin{DoxyParams}{Parameters}
-{\em xcenter} & representa centro do elipsoide no eixo x \\
-\hline
-{\em ycenter} & representa centro do elipsoide no eixo y \\
-\hline
-{\em zcenter} & representa centro do elipsoide no eixo z \\
-\hline
-{\em rx} & representa o raio da esfera no eixo x \\
-\hline
-{\em ry} & representa o raio da esfera no eixo y \\
-\hline
-{\em rz} & representa o raio da esfera no eixo z \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_sculptor_a794a2b6ee8fc8098fd6150cb46101fc6}\label{class_sculptor_a794a2b6ee8fc8098fd6150cb46101fc6}} 
-\index{Sculptor@{Sculptor}!putSphere@{putSphere}}
-\index{putSphere@{putSphere}!Sculptor@{Sculptor}}
-\doxysubsubsection{\texorpdfstring{putSphere()}{putSphere()}}
-{\footnotesize\ttfamily void Sculptor\+::put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius }\end{DoxyParamCaption})}
-
-
-
-put\+Sphere adiciona voxels nos eixos configurados no formato de uma esfera 
-
-
-\begin{DoxyParams}{Parameters}
-{\em xcenter} & representa centro da esfera no eixo x \\
-\hline
-{\em ycenter} & representa centro da esfera no eixo y \\
-\hline
-{\em zcenter} & representa centro da esfera no eixo z \\
-\hline
-{\em radius} & é presenta o raio da esfera \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}\label{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}} 
 \index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
 \index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
@@ -245,7 +115,7 @@ put\+Sphere adiciona voxels nos eixos configurados no formato de uma esfera
 
 
 
-put\+Voxel adiciona um voxel nos eixos configurados 
+\mbox{\hyperlink{classput_voxel}{put\+Voxel}} adiciona um voxel nos eixos configurados 
 
 
 \begin{DoxyParams}{Parameters}
